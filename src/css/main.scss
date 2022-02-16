@@ -1,0 +1,284 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "base";
+
+body {
+  @apply text-black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  @apply text-white justify-between p-5 w-full;
+
+  &__scrolled {
+    @apply bg-primary bg-opacity-90 border-b border-primary;
+  }
+}
+
+.navbar-wrapp {
+  @apply flex w-full justify-between;
+}
+
+.headline {
+  font-size: 24px;
+  font-family: "Rubik", sans-serif;
+  @apply uppercase;
+
+  @screen lg {
+    font-size: 48px;
+  }
+}
+
+
+.closeIcon{
+
+  z-index: 99;
+  display: none;
+  position: relative;
+
+}
+
+.menu{
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  height: 300px;
+  @apply bg-primary;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+
+
+  @screen lg {
+    position: relative;
+    background-color: transparent;
+    transform: translateY(0%);
+    @apply flex;
+    height: auto;
+    padding-top: 0;
+
+  }
+}
+
+
+.showMenu {
+  transform: translateY(0);
+}
+
+
+
+.b-tab {
+  display: none;
+  @apply p-5;
+}
+
+.b-tab.active {
+  display: block;
+}
+.b-nav-tab {
+  @apply bg-white font-bold border border-black border-opacity-10 flex items-center;
+}
+.b-nav-tab.active {
+  @apply bg-secondary text-white;
+  .service__list{
+    @apply bg-white;
+  }
+}
+
+.subtitle {
+  font-size: 18px;
+
+  @screen lg {
+    font-size: 24px;
+  }
+}
+
+.advantage {
+  &__item {
+    @apply flex items-center justify-center flex-col;
+  }
+}
+
+.dropdown-menu {
+  padding-top: 3.8rem;
+}
+
+.dropdown-check {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @apply text-white;
+
+  &__hero {
+    @screen lg {
+      background-image: url("../img/banner-top.jpg");
+    }
+
+    background-image: url("../img/s-banner-top.jpg");
+  }
+
+  &__marketing {
+    background-image: url("../img/banner-top.jpg");
+  }
+
+  &__work {
+    background-image: url("../img/banner-work.jpg");
+  }
+
+  &__service {
+    background-image: url("../img/banner-middle.jpg");
+
+  }
+}
+
+
+.banner-content {
+  @apply flex items-center justify-center flex-col p-5 text-center;
+}
+
+.btn {
+  @apply px-5 py-3 text-white rounded-sm text-sm uppercase tracking-wider;
+
+  &__secondary {
+    @apply bg-secondary;
+  }
+  &__primary {
+    @apply bg-primary;
+  }
+
+  @screen lg {
+    @apply px-5 py-3;
+  }
+}
+
+.icon {
+  @apply flex items-center justify-center;
+
+  &__small {
+    font-size: 20px;
+  }
+  &__big {
+    @apply p-3;
+  }
+
+  &__giant {
+    @apply p-5;
+    font-size: 40px;
+  }
+
+  &__white {
+    @apply bg-white text-primary;
+  }
+
+  &__secondary {
+    @apply bg-secondary;
+  }
+}
+
+.nav-panel {
+  @apply flex items-center;
+
+  &__left {
+    @apply lg:justify-start;
+
+    @screen lg {
+      @apply lg:w-full w-auto;
+    }
+  }
+
+  &__right {
+    @apply lg:justify-center;
+
+    @screen lg {
+      @apply justify-end  w-full;
+    }
+  }
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?oz57z9");
+  src: url("../fonts/icomoon.eot?oz57z9#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?oz57z9") format("truetype"), url("../fonts/icomoon.woff?oz57z9") format("woff"),
+    url("../fonts/icomoon.svg?oz57z9#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-heart:before {
+  content: "\e90f";
+}
+.icon-arrow-bot:before {
+  content: "\e900";
+}
+.icon-arrow-circle:before {
+  content: "\e901";
+}
+.icon-arrow-l:before {
+  content: "\e902";
+}
+.icon-arrow-r:before {
+  content: "\e903";
+}
+.icon-arrow-top:before {
+  content: "\e904";
+}
+.icon-buger:before {
+  content: "\e905";
+}
+.icon-burger-close:before {
+  content: "\e906";
+}
+.icon-calendar:before {
+  content: "\e907";
+}
+.icon-check-b:before {
+  content: "\e908";
+}
+.icon-check-t:before {
+  content: "\e909";
+}
+.icon-pholio:before {
+  content: "\e90a";
+}
+.icon-phone:before {
+  content: "\e90b";
+}
+.icon-pro:before {
+  content: "\e90c";
+}
+.icon-shield:before {
+  content: "\e90d";
+}
+.icon-wallet:before {
+  content: "\e90e";
+}
